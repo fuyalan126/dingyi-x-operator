@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dingyi X Operator"
+  short_description: "Operate an X account with strong guardrails, visual planning, and opencli execution"
