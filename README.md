@@ -2,9 +2,21 @@
 
 [中文说明](README.zh-CN.md)
 
+> Cross-platform X/Twitter operator skill for Codex, Claude Code, and OpenClaw.
+
+[![Release](https://img.shields.io/github/v/release/fuyalan126/dingyi-x-operator)](https://github.com/fuyalan126/dingyi-x-operator/releases)
+[![License](https://img.shields.io/github/license/fuyalan126/dingyi-x-operator)](LICENSE)
+[![Platforms](https://img.shields.io/badge/platform-Codex%20%7C%20Claude%20Code%20%7C%20OpenClaw-111827)](README.md)
+
 `dingyi-x-operator` is an opinionated X/Twitter operating agent for people who care about signal, taste, and reputation safety.
 
-It helps with:
+Best for:
+
+- founders, builders, and operators who want help running X without turning into spam
+- people who want AI help with replies, original posts, source-to-post workflows, and visual briefs
+- teams or individuals who use Codex, Claude Code, or OpenClaw as their agent runtime
+
+What it does:
 
 - finding good tweets to engage with
 - drafting replies that sound specific and human
@@ -13,6 +25,26 @@ It helps with:
 - adapting content between Chinese and English
 - deciding whether a post needs a visual and writing the visual brief
 - executing approved actions through `opencli`
+
+## Quick start
+
+Copy the adapter for your runtime into your skills directory:
+
+```bash
+# Codex
+cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+
+# Claude Code
+cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+
+# OpenClaw
+cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+```
+
+Then customize local state with:
+
+- `dingyi-x-operator/templates/PROFILE.example.md`
+- `dingyi-x-operator/templates/MEMORY.example.md`
 
 ## What this repository is
 
@@ -51,6 +83,9 @@ dingyi-x-operator/
   templates/
     PROFILE.example.md
     MEMORY.example.md
+marketing/
+  release-kit.md
+  banner-brief.md
 ```
 
 ## Core dependencies
@@ -150,6 +185,13 @@ The core skill ships with reusable references for:
 - memory template
 - output templates
 - visual strategy
+
+## Launch assets
+
+This repository also ships lightweight launch copy and visual planning files:
+
+- [`marketing/release-kit.md`](marketing/release-kit.md)
+- [`marketing/banner-brief.md`](marketing/banner-brief.md)
 
 ## Maintenance
 

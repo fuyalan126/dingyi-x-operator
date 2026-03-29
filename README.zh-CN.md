@@ -2,9 +2,21 @@
 
 [English README](README.md)
 
+> 面向 Codex、Claude Code 和 OpenClaw 的跨平台 X/Twitter 运营 skill。
+
+[![Release](https://img.shields.io/github/v/release/fuyalan126/dingyi-x-operator)](https://github.com/fuyalan126/dingyi-x-operator/releases)
+[![License](https://img.shields.io/github/license/fuyalan126/dingyi-x-operator)](LICENSE)
+[![Platforms](https://img.shields.io/badge/platform-Codex%20%7C%20Claude%20Code%20%7C%20OpenClaw-111827)](README.md)
+
 `dingyi-x-operator` 是一个偏重信号质量、审美判断和声誉安全的 X/Twitter 运营 agent。
 
-它可以帮助你：
+适合谁：
+
+- 不想把 X 做成低质自动化互动的 founder、builder、operator
+- 想用 AI 帮自己做回复、原创帖子、资料改写和配图规划的人
+- 正在使用 Codex、Claude Code、OpenClaw 作为 agent 运行环境的用户
+
+它能做什么：
 
 - 找出值得互动的高质量推文
 - 起草更具体、更像真人的回复
@@ -13,6 +25,26 @@
 - 在中英文之间做内容适配
 - 判断帖子是否需要配图，并输出视觉 brief
 - 通过 `opencli` 执行已经确认过的动作
+
+## 快速开始
+
+把对应平台的 adapter 复制到你的 skills 目录：
+
+```bash
+# Codex
+cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+
+# Claude Code
+cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+
+# OpenClaw
+cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+```
+
+然后用下面两个模板开始配置本地状态：
+
+- `dingyi-x-operator/templates/PROFILE.example.md`
+- `dingyi-x-operator/templates/MEMORY.example.md`
 
 ## 这个仓库是什么
 
@@ -55,6 +87,9 @@ dingyi-x-operator/
   templates/
     PROFILE.example.md
     MEMORY.example.md
+marketing/
+  release-kit.md
+  banner-brief.md
 ```
 
 ## 核心依赖
@@ -154,6 +189,13 @@ cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingy
 - memory template
 - output templates
 - visual strategy
+
+## 发布素材
+
+仓库还带了两份轻量发布素材：
+
+- [`marketing/release-kit.md`](marketing/release-kit.md)
+- [`marketing/banner-brief.md`](marketing/banner-brief.md)
 
 ## 维护方式
 
