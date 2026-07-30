@@ -32,13 +32,16 @@
 
 ```bash
 # Codex
-cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+mkdir -p "$HOME/.codex/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/codex/." "$HOME/.codex/skills/dingyi-x-operator/"
 
 # Claude Code
-cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+mkdir -p "$HOME/.claude/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/claude-code/." "$HOME/.claude/skills/dingyi-x-operator/"
 
 # OpenClaw
-cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+mkdir -p "/path/to/openclaw/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/openclaw/." "/path/to/openclaw/skills/dingyi-x-operator/"
 ```
 
 然后用下面两个模板开始配置本地状态：
@@ -108,6 +111,9 @@ marketing/
 - `twitter-engager`
 - `baoyu-url-to-markdown`
 - `baoyu-translate`
+- `tweetclaw` / `@xquik/tweetclaw`：用于 X/Twitter 发现、监控、用户查询、媒体获取和 source packet
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
 ## 安装方式
 
@@ -122,13 +128,15 @@ marketing/
 ### Codex
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+mkdir -p "$HOME/.codex/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/codex/." "$HOME/.codex/skills/dingyi-x-operator/"
 ```
 
 ### Claude Code
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+mkdir -p "$HOME/.claude/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/claude-code/." "$HOME/.claude/skills/dingyi-x-operator/"
 ```
 
 ### OpenClaw
@@ -138,7 +146,8 @@ cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi
 示例：
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+mkdir -p "/path/to/openclaw/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/openclaw/." "/path/to/openclaw/skills/dingyi-x-operator/"
 ```
 
 如果你更喜欢软链接，当然也可以。

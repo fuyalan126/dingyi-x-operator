@@ -32,13 +32,16 @@ Copy the adapter for your runtime into your skills directory:
 
 ```bash
 # Codex
-cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+mkdir -p "$HOME/.codex/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/codex/." "$HOME/.codex/skills/dingyi-x-operator/"
 
 # Claude Code
-cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+mkdir -p "$HOME/.claude/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/claude-code/." "$HOME/.claude/skills/dingyi-x-operator/"
 
 # OpenClaw
-cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+mkdir -p "/path/to/openclaw/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/openclaw/." "/path/to/openclaw/skills/dingyi-x-operator/"
 ```
 
 Then customize local state with:
@@ -104,6 +107,9 @@ Recommended helper skills when your environment supports them:
 - `twitter-engager`
 - `baoyu-url-to-markdown`
 - `baoyu-translate`
+- `tweetclaw` / `@xquik/tweetclaw` for X/Twitter discovery, monitoring, user lookup, media retrieval, and source packets
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
 ## Installation
 
@@ -118,13 +124,15 @@ Why this works:
 ### Codex
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/codex" "$HOME/.codex/skills/dingyi-x-operator"
+mkdir -p "$HOME/.codex/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/codex/." "$HOME/.codex/skills/dingyi-x-operator/"
 ```
 
 ### Claude Code
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/claude-code" "$HOME/.claude/skills/dingyi-x-operator"
+mkdir -p "$HOME/.claude/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/claude-code/." "$HOME/.claude/skills/dingyi-x-operator/"
 ```
 
 ### OpenClaw
@@ -134,7 +142,8 @@ Install the `openclaw/` adapter into your OpenClaw skills directory using your p
 Example:
 
 ```bash
-cp -R "/path/to/repo/dingyi-x-operator/openclaw" "/path/to/openclaw/skills/dingyi-x-operator"
+mkdir -p "/path/to/openclaw/skills/dingyi-x-operator"
+cp -R "/path/to/repo/dingyi-x-operator/openclaw/." "/path/to/openclaw/skills/dingyi-x-operator/"
 ```
 
 If you prefer symlinks instead of copies, that also works.
